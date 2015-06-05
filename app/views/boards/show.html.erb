@@ -1,7 +1,12 @@
 
-<h1><%=@board.name%></h1>
+
+
+
+
 <%pinnumber=0%>
 
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;<%=@board.name%></h1>
+<div class="show-board">
 
 
 <%@pins.each do |pin|%>
@@ -13,9 +18,9 @@
 		<%=link_to 'DeletePin', user_board_pin_path(current_user,@board.id, pin.id), method: :delete, data: {confirm:"Do you really want to delete this Pin?"} %><br>
 	<%end%>
 <%end%>
-
 <% if @board.user==current_user %>
 	<%=link_to 'Create a new Pin', new_user_board_pin_path(current_user,@board.id)%>
 <%end%>
 	<br><%=link_to 'Boards List', user_boards_path(current_user)%></br>
+</div>
 

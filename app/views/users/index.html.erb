@@ -1,3 +1,33 @@
-<h1>Users#index</h1>
-<p><%=link_to 'Index of Your Board', user_boards_path(current_user)%> </p>
+<div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <h3 class="text-muted">PinterestingBru</h3>
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Welcome to PinterestingBru!</h1>
+        <p class="lead">Current User:<%=current_user.email%></p>
+
+        <p><a class="btn btn-lg btn-success" href="/users/:user_id/boards" role="button">Index of Your Boards </a></p>
+
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>The Registered Users</h2>
+          <p><a class="btn btn-primary" href="/users/:id" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Yunny Chung 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
 

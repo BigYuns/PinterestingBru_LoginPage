@@ -17,12 +17,6 @@ class PinsController < ApplicationController
 		@pin=Pin.find params[:id]
 		@user=@pin.user
 		@board=@user.boards.find(params[:board_id])
-		#@board=current_user.boards.find(params[:board_id])
-		#@pin=@board.pins.find params[:id]
-
-
-
-
 
 	end
 

@@ -1,14 +1,25 @@
 
+<div class="row-featurette">
+        <div class="col-md-12">
+          <h2 class="featurette-heading"><%=@pin.title%> <span class="text-muted"><%=@pin.subtitle%></span></h2>
+          <p class="lead"><%=@pin.description%></p>
+        </div>
+      </div>
 
-<h1><%=@pin.title%> </h1>
-<h3><%=@pin.subtitle%></h3>
-<br><%=@pin.description%></br>
+<div class=images$>
+
 <br><%= image_tag(@pin.url, width: "30%", height: "30%") %></br>
 <br><%= image_tag(@pin.url2, width: "30%", height: "30%") %></br>
 <br><%= image_tag(@pin.url3, width: "30%", height: "30%") %></br>
 <br><%= image_tag(@pin.url4, width: "30%", height: "30%") %></br>
 
 
+
+
+
 <%=link_to 'Board', user_board_path(current_user,@board.id) %>
+<% if @pin.user==current_user %>
 <%=link_to 'Edit', edit_user_board_pin_path(current_user, @board.id, @pin.id)%>
 <%=link_to 'Delete',user_board_pin_path(current_user,@board.id, @pin.id), method: :delete, data: {confirm:"Do you really want to delete the pin?"} %>
+<%end%>
+</div>

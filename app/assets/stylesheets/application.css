@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+div {
+	text-align: center;
+
+}
+
+.each-public-class{
+	font-family: 'Indie Flower', cursive;
+}
+
+.show-board{
+	font-family: 'Indie Flower', cursive;
+	font-size: 30px;
+}
+
+
+.row-featurette{
+	text-align: center;
+
+}
+
+.Edit-board{
+	font-family: 'Indie Flower', cursive;
+	font-size: 12px;
+
+}
