@@ -24,7 +24,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'twitter-bootstrap-rails'
+gem 'twilio-ruby'
 
+#@client = Twilio::REST::Client.new account_sid, auth_token
+
+#puts "Created client, sending message..."
+#to_number= 
+
+#@client.messages.create(
+  #from: '+14159341234',
+  #to: '+16105557069',
+  #body: 'Hey there!'
+#)
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
